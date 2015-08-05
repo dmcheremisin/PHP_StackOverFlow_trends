@@ -1,11 +1,12 @@
 <?php
-//Presented work is my quriosity about popular languages.
+//Presented work is my curiosity about popular languages.
 //I think that for every programmer it is interesting - 
 //what languages are popular in different organisations all about the world.
 //Stackoverflow in this case is best provider of such information.
 
 $url = "http://careers.stackoverflow.com/jobs/feed?";
 $USA = $url."location=USA";
+$UK = $url."location=UK";
 
 //this class demonstrates a possibility to parse data about 
 //programming languages trends from a well-known website stackoverflow.com
@@ -53,5 +54,6 @@ class prograte {
 }
 
 $data = new prograte();
-$data->getdata($USA);
-$data->showdata();
+$data->getdata($USA);//getting data from USA
+$data->getdata($UK);//getting data from UK
+$data->showdata();//sorting data by descent and showing in table
